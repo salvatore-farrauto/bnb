@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8>
+</head>
+<body>
+<p id="demo">Dove ti trovi?</p>
+<button onclick="getLocation()">Prova!</button>
+<script>
+var x=document.getElementById("demo");
+function getLocation(){
+	if (navigator.geolocation){
+	//funzione supportata o autorizzata,
+	//richiamo la funzione di callback showPosition
+	navigator.geolocation.getCurrentPosition(showPosition);
+	}
+	else{
+	x.innerHTML= "Geolocalizzazione non supportata";
+	}
+}
+function showPosition(position){
+x.innerHTML="Latitudine: " + position.coords.latitude +
+" Longitudine: " + position.coords.longitude; }
+</script>
+</body>
+<BODY> 
+		<BODY BACKGROUND="immagine.jpg">
+	</BODY>
+</html>
+
